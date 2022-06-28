@@ -1,0 +1,348 @@
+#01-Faca um Programa que peca as quatro notas de 10 alunos, calcule e armazene num vetor a média de cada aluno, imprima o numero de alunos com média maior ou igual a 7.0.#
+
+medias = list()
+
+for aluno in range(10):
+
+    soma_notas = 0
+
+    print(f'Notas do aluno {aluno+1}')
+
+    for nota in range(4):
+
+        soma_notas += float(input(f'{nota+1}ª nota: '))
+
+        medias.append(soma_notas/3)
+
+        print()
+
+        aprovados = 0
+
+    for media in medias:
+
+        if media >= 7:
+
+            aprovados += 1
+
+    print(f'{aprovados} aluno(s) com médias maiores ou iguais a 7,0')
+    
+    
+#02-Faça um programa que leia uma lista de 5 números inteiros, mostre a soma, a
+multiplicação e os números#
+    
+numeros = []
+i = 0
+while len(numeros) != 5:
+
+   i += 1
+
+   print("Diga o número " + str(i) + "º:")
+
+   try:
+       numero = int(input())
+   except:
+
+       print("Número inválido.")
+
+       i -= 1
+
+       continue
+
+   numeros.append(numero)
+
+print("Números: " + ", ".join(str(numero) for numero in numeros))
+
+soma = sum(numeros)
+
+print("Soma: " + str(soma))
+
+multiplicacao = 1
+
+for numero in numeros:
+
+   multiplicacao = multiplicacao * numero
+
+print("Multiplicação: " + str(multiplicacao))
+
+#03 - Faça um Programa que peça a idade e a altura de 5 pessoas,
+armazene cada informação no seu respectivo vetor.
+Imprima a idade e a altura na ordem inversa a ordem lida.#
+
+idades = []
+alturas = []
+for i in range(1, 6):
+    print('%dº Pessoa' %i)
+    idade = int(input('Digite a idade: '))
+    altura = float(input('Digite a altura: '))
+    idades.append(idade)
+    alturas.append(altura)
+
+print('Ordem inversa')
+print('Alturas')
+print(alturas[::-1])
+print('Idades')
+print(idades[::-1])
+
+print('Ordem lida')
+print('Alturas')
+print(alturas)
+
+print('Idades')
+print(idades)
+
+#04-faça um programa que leia um vetor A com 10 numeros inteiros calcule e mostre a soma soma dos quadrados do elementos do vetor
+
+soma_dos_quadrados = 0
+for i in range(10):
+    soma_dos_quadrados += int(input(f"digite o {i+1}° numero inteiro: "))**2
+    print(f"A soma dos quadrados dos numeros digitados é {soma_dos_quadrados}")
+    
+#05-faça um programa que leia dois vetores com 10 elementos cada.
+gere um vetor de 20 elementos cujos valores deverao ser compostos pelos elementos intercalados dos dois outros vetores#
+
+vetor1 = []
+vetor2 = []
+vetor3 = []
+
+for elemento in range(0, 10):
+    vetor1.append(int(input("Digite um elemento: ")))
+    
+for elemento in range(0, 10):
+    vetor2.append(int(input("Digite um elemento: ")))
+    
+for elemento in range(0, 10):
+    vetor3.append(vetor1[elemento])
+    vetor3.append(vetor2[elemento])
+
+print(vetor3)
+
+#06-faça um programa que leia duas strings e informe o conteudo delas seguido do seu comprimento
+informe tambem se as duas strings possuem o mesmo comprimento e se são iguais ou diferentes no conteudo#
+
+
+string_1 = input("digite sua primeira string")
+string_2 = input("digite sua segunda string")
+tamanho_str_1 = len(string_1)
+tamanho_str_2 = len(string_2)
+print(string_1+" "+str(tamanho_str_1))
+print(string_2+" "+str(tamanho_str_2))
+if len(string_1)!=len(string_2):
+    print("As duas strings são de tamanhos diferentes.")
+else:
+    print("As duas strings têm o mesmo tamanho")
+    
+if string_1!=string_2:
+    print("As duas strings possuem conteúdo diferentes.")
+else:
+    print("As duas strings possuem o mesmo conteúdo")
+
+#07- Faça um programa que permita ao usuário digitar o seu nome e em seguida mostre o 
+ nome do usuário de trás para frente utilizando somente letras maiúsculas. Dica: lembre−se que ao informar o nome, 
+ o usuário pode digitar letras maiúsculas ou minúsculas.#
+ 
+ print('Pode digitar seu nome com letras maiúsculas, minúsculas ou mistas.')
+nome = input('Digite seu nome: ').upper()
+invNome = nome[::-1]
+print('{} ---> {}'.format(nome, invNome))
+
+#08-nome na vertical. faça um programa que solicite o nome do usuário e imprima-o na vertical#
+
+for c in input("Digite seu nome: "): print(c)
+print(*input("Novamente digite seu sobrenome: "), sep="\n")
+
+#09-nome na vertical em escada#
+
+def NomeVertical(nome):
+    lista = " "
+    for i in nome:
+        lista += i
+        print(lista)
+    
+    
+nome = str(input("digite seu nome:"))
+NomeVertical(nome)
+
+
+10-
+
+for linhas in range(3):
+       linhamatriz = []
+       for coluna in range(3):
+              linhamatriz.append(int(input('Digite um numero: ')))
+       matriz.append(linhamatriz)
+print(matriz)
+
+numero = int(input('Digite o numero para a multiplicação: '))
+
+for linha in range(3):
+       for colun in range(3):
+              if linha == coluna:
+                     matriz[linha][coluna] = numero * matriz[linha][coluna]
+print(matriz)
+
+
+11-
+
+
+matriz1=[[0, 0], [0, 0]]
+for i in range(2):
+    for j in range(2):
+        matriz1[i][j]= int(input(' Dig ite o elemento [' +str(i) + ' ]['+ str(j) + ']:'))
+        print(matriz1)
+        print('\n') 
+        matriz2=[[0, 0], [0, 0]] 
+        for k in range(2):
+            for p in range(2):
+
+
+12-
+
+matrizA = [[0, 0], [0, 0]]
+matrizB = [[0, 0], [0, 0]]
+matrizC = [[0, 0], [0, 0]]
+
+
+def recebeMatriz():
+    for i in range(0, 2):
+        for j in range(0, 2):
+            matrizA[i][j] = int(input(f"digite os valores da matriz A:"))
+        
+        for i range(0, 2):
+            for j in range(0, 2):
+                matrizB[i][j] = int(input(f"digite os valores da matriz b:"))
+
+
+def multiplicaMatrizes():
+    numeroLinhasA = len(matrizA[0])
+    numeroLinhasB = len(matrizb[0])
+    
+    numeroColunasA, numeroColunasB = len(matrizA[0]), len(matrizB[0])
+    
+    if (numeroLinhasA == numeroLinhasB) and (numeroColunasA == numeroColunasB):
+        for i in range(numeroLinhasA):
+            for j in range(numeroColunasA):
+                matrizC[i][j] = matrizA[i][j] * matrizB[i][j]
+    else:
+        print("não é possivel multiplicar matrizes com colunas/linhas diferentes!")
+    
+    print("matrizA.:", matrizA)
+    print("matrizB.:", matrizB)
+    print("matrizC.:", matrizC)
+    
+recebeMatriz()
+multiplicaMatrizes()
+parte1
+
+
+13-
+
+def enes(n):
+    for c in range(1, n + 1):
+        cont = 1
+        while True:
+            print(c, end=' ')
+            if cont == c:
+                break
+            cont += 1
+        print()
+        
+        
+n = int(input('Digite um número: '))
+enes(n)
+parte2
+
+14-
+
+def soma3(a, b, c):
+    s = a + b + c
+    return s
+
+
+print('SOMA DE TRÊS NÚMEROS')
+a = int(input('Primeiro número: '))
+b = int(input('Segundo número: '))
+c = int(input('Terceiro número: '))
+
+print('Soma = ', soma3(a, b, c))
+
+15-
+
+def pn(n):
+    if n > 0:
+        print('Positivo')
+    elif n == 0:
+        print('Nulo')
+    else:
+        print('Negativo')
+
+print('POSITIVO OU NEGATIVO')
+n = int(input('digite um número: '))
+print('Este número é', end=' ')
+pn(n)
+
+16-
+
+def somaImposto(taxaImposto, Custo):
+    return (1 + taxaImposto/100)*Custo
+t = float(input('Digite a taxa de imposto: '))
+c = float(input('Digite o custo: '))
+print('Valor com imposto:', somaImposto(t,c))
+
+17-
+
+def valor_por_omissao(valor):
+    if valor=='':
+        return int(1)
+    else:
+        return faixa_minima_maxima(int(valor))
+
+def faixa_minima_maxima(valor):
+    if valor<1:
+        return 1
+    elif valor>20:
+        return 20
+    else:
+        return valor
+
+def cria_linha(linha):
+    l='+'
+    for x in range(linha):
+        l+='-'
+    l+='+'
+    print (l)
+
+def cria_coluna(linha, coluna):
+    for y in range(coluna):
+        c='|'
+        c+= ' '*linha
+        c+='|'
+        print (c)
+
+def desenha_moldura(linha, coluna):
+    cria_linha(linha)
+    cria_coluna(linha, coluna)
+    cria_linha(linha)
+
+linha=input('Diga quantos +----+, entre 1 e 20: ')
+coluna=input('Diga quantos |    |, entre 1 e 20: ')
+desenha_moldura(valor_por_omissao(linha), valor_por_omissao(coluna))
+
+18-
+
+#Data com mês por extenso. Construa uma função que receba uma data no formato
+#DD/MM/AAAA e devolva uma string no formato D de mesPorExtenso de AAAA.
+#Opcionalmente, valide a data e retorne NULL caso a data seja inválida.
+
+def extenso_mes(mes):
+	lista_de_mes = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"]
+	mes_ex = lista_de_mes[mes-1]
+	return mes_ex
+
+def extenso_dia(dia):
+
+	lista_de_dia = ["Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez", "Onze", "Doze", "Treze", "Catorzer", "Quinze", "Dezesseis", "Dezessete", "Dezoito", "Dezenove", "Vinte", "Vinte e Um", "Vinte e Dois", "Vinte e Três", "Vinte e Quatro", "Vinte e Cinco", "Vinte e Seis", "Vinte e Sete", "Vinte e Oito", "Vinte e Nove", "Trinta", "Trinta e Um"]
+	dia_ex = lista_de_dia[dia-1]
+	return dia_ex
+
+
+print("O valor por extenso é " + extenso_dia(dia) + " de " + extenso_mes(mes) + " de %i "%ano)
